@@ -1,0 +1,40 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FDF6EC;
+    color: #DAB88B;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;;
+    background-color: #F3E9DD;
+    padding: 25px;
+}
+
+button {
+    background-color: #B7CADB;
+    color: #FDF6EC;
+    border: 2px solid #F3E9DD;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 20px;
+    margin: auto;
+    width: 100%;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 1.2rem;
+}
