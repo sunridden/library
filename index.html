@@ -14,10 +14,26 @@
 <body>
     <div id="header">
         <h1>virtual library</h1>
-        <button>add book</button>
+        <button id="add-book-button">add book</button>
     </div>
     <div id="books">
-        
+        <form action="" id="add-book-form">
+            <h2>Add new book</h2>
+            <p>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+            </p>
+            <p>
+                <input type="text" id="author" name="title" placeholder="Author" required>
+            </p>
+            <p>
+                <input type="number" id="pages" name="pages" placeholder="Pages" required>
+            </p>
+            <p class="read-statis">
+                <label for="read-statis">Have you read it?</label>
+                <input type="checkbox" id="read-statis" name="read-statis">
+            </p>
+            <button id="submit-btn">Submit</button>
+        </form>
     </div>
     <div id="footer">
         <p id="copyright-text">

@@ -21,10 +21,54 @@ body {
 button {
     background-color: #B7CADB;
     color: #FDF6EC;
-    border: 2px solid #F3E9DD;
+    border: thin solid #F3E9DD;
     border-radius: 10px;
     padding: 10px;
     font-size: 1.25rem;
+}
+
+#add-book-form {
+    background-color: #DAB88B;
+    color: white;
+    height: 400px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+}
+
+#add-book-form p {
+    width: 80%;
+}
+
+#add-book-form input[type=text], input[type=number] {
+    height: 2.5rem;
+    border: thin;
+    border-radius: 10px;
+    width: 100%;
+    text-indent: 10px;
+}
+
+#add-book-form input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    text-indent: 10px;
+}
+
+.read-statis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#submit-btn {
+    border: thin solid #DAB88B;
 }
 
 #footer {
