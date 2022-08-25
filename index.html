@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-    <script src="main.js"></script>
+<script src="main.js" defer></script>
 </head>
 <body>
     <div id="header">
@@ -17,13 +17,13 @@
         <button id="add-book-button">add book</button>
     </div>
     <div id="books">
-        <form action="" id="add-book-form">
+        <form id="add-book-form">
             <h2>Add new book</h2>
             <p>
                 <input type="text" id="title" name="title" placeholder="Title" required>
             </p>
             <p>
-                <input type="text" id="author" name="title" placeholder="Author" required>
+                <input type="text" id="author" name="author" placeholder="Author" required>
             </p>
             <p>
                 <input type="number" id="pages" name="pages" placeholder="Pages" required>
@@ -34,6 +34,13 @@
             </p>
             <button id="submit-btn">Submit</button>
         </form>
+        <div class="book">
+            <p class="book-title"></p>
+            <p class="book-author"></p>
+            <p class="book-pages"></p>
+            <button class="read-btn">not read yet</button>
+            <button class="remove-btn">remove</button>
+        </div>
     </div>
     <div id="footer">
         <p id="copyright-text">

@@ -36,7 +36,7 @@ button {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     width: 350px;
@@ -69,6 +69,29 @@ button {
 
 #submit-btn {
     border: thin solid #DAB88B;
+}
+
+.book {
+    background-color: white;
+    height: 300px;
+    width: 400px;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.book button {
+    width: 80%;
+}
+
+.book button.read {
+    background-color: #C1D5A4;
+}
+
+.read-btn {
+    background-color: #F37878;
 }
 
 #footer {
