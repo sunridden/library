@@ -16,32 +16,24 @@
         <h1>virtual library</h1>
         <button id="add-book-button">add book</button>
     </div>
-    <div id="books">
-        <form id="add-book-form" onsubmit="return false">
-            <h2>Add new book</h2>
-            <p>
-                <input type="text" id="title" name="title" placeholder="Title" required>
-            </p>
-            <p>
-                <input type="text" id="author" name="author" placeholder="Author" required>
-            </p>
-            <p>
-                <input type="number" id="pages" name="pages" placeholder="Pages" required>
-            </p>
-            <p class="read-statis">
-                <label for="read-statis">Have you read it?</label>
-                <input type="checkbox" id="read-statis" name="read-statis">
-            </p>
-            <button id="submit-btn">Submit</button>
-        </form>
-        <div class="book">
-            <p class="book-title"></p>
-            <p class="book-author"></p>
-            <p class="book-pages"></p>
-            <button class="read-btn">not read yet</button>
-            <button class="remove-btn">remove</button>
-        </div>
-    </div>
+    <form id="add-book-form" onsubmit="return false">
+        <h2>Add new book</h2>
+        <p>
+            <input type="text" id="title" name="title" placeholder="Title" required>
+        </p>
+        <p>
+            <input type="text" id="author" name="author" placeholder="Author" required>
+        </p>
+        <p>
+            <input type="number" id="pages" name="pages" placeholder="Pages" required>
+        </p>
+        <p class="read-statis">
+            <label for="read-statis">Have you read it?</label>
+            <input type="checkbox" id="read-statis" name="read-statis">
+        </p>
+        <button id="submit-btn">Submit</button>
+    </form>
+    <div id="books"></div>
     <div id="footer">
         <p id="copyright-text">
             <script>

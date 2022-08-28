@@ -8,6 +8,7 @@ body {
     background-color: #FDF6EC;
     color: #DAB88B;
     font-family: 'Roboto', sans-serif;
+   
 }
 
 #header {
@@ -71,10 +72,21 @@ button {
     border: thin solid #DAB88B;
 }
 
+#books {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 20px;
+    margin-left: clamp(20px, 8vw, 180px);
+    margin-right: clamp(20px, 8vw, 180px);
+}
+
 .book {
     background-color: white;
     height: 300px;
-    width: 400px;
+    min-width: 285px;
+    padding: 20px;
     font-size: 1.25rem;
     display: flex;
     flex-direction: column;
