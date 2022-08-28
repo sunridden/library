@@ -18,7 +18,7 @@ addBookForm.addEventListener('submit', () => {
     let author = addBookForm.elements['author'];
     let numOfPages = addBookForm.elements['pages'];
     let readStatus = addBookForm.elements['read-statis'];
-    let newBook = new Book(title.value, author.value, numOfPages.value, readStatus.value);
+    let newBook = new Book(title.value, author.value, numOfPages.value, readStatus.checked);
     addBookToLibrary(newBook);
 })
 
