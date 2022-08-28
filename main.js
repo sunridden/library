@@ -13,6 +13,16 @@ const btn = document.getElementById("add-book-button");
 
 let myLibrary = [];
 
+btn.addEventListener('click', () => {
+    addBookForm.classList.add("visible");
+
+    window.onclick = (event) => {
+        if (event.target.id != "add-book-button") {
+            addBookForm.classList.remove("visible");
+        }
+    }
+})
+
 addBookForm.addEventListener('submit', () => {
     let title = addBookForm.elements['title'];
     let author = addBookForm.elements['author'];
@@ -20,6 +30,7 @@ addBookForm.addEventListener('submit', () => {
     let readStatus = addBookForm.elements['read-statis'];
     let newBook = new Book(title.value, author.value, numOfPages.value, readStatus.checked);
     addBookToLibrary(newBook);
+    addBookForm.classList.remove("visible");
 })
 
 function addBookToLibrary(book) {

@@ -32,15 +32,23 @@ button {
     background-color: #DAB88B;
     color: white;
     height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 20px;
     padding: 20px;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     width: 350px;
+    visibility: hidden;
+}
+
+#add-book-form.visible {
+    visibility: visible;
 }
 
 #add-book-form p {
