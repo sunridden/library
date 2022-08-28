@@ -67,6 +67,8 @@ function updateLibraryDisplay() {
     removeBtn.classList.add("remove-btn");
     removeBtn.innerHTML = "remove";
     bookToBeAdded.appendChild(removeBtn);
+
+    removeBook(removeBtn, newBook.title, newBook.author);
 }
 
 function changeReadStatus(btn) {
@@ -80,6 +82,22 @@ function changeReadStatus(btn) {
             btn.innerHTML = "read";
             btn.classList.add("read");
         }
+    })
+}
+
+function removeBook(btn, title, author) {
+    //removes book from library and html page
+    btn.addEventListener('click', () => {
+        let index = 0;
+        myLibrary.forEach((book) => {
+            if (book.title === title && book.author === author) {
+                myLibrary.splice(index, 1);
+            }
+            index++;
+        })
+        let bookToBeRemoved = btn.parentElement;
+        bookToBeRemoved.remove();
+
     })
 }
 
