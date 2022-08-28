@@ -60,6 +60,7 @@ function updateLibraryDisplay() {
         readStatusBtn.innerHTML = "not read yet";
     }
 
+    changeReadStatus(readStatusBtn);
     bookToBeAdded.appendChild(readStatusBtn);
 
     let removeBtn = document.createElement("button");
@@ -67,6 +68,21 @@ function updateLibraryDisplay() {
     removeBtn.innerHTML = "remove";
     bookToBeAdded.appendChild(removeBtn);
 }
+
+function changeReadStatus(btn) {
+
+    //changes color for 'read' button depending on whether a book is read
+    btn.addEventListener('click', () => {
+        if (btn.classList.contains("read")) {
+            btn.innerHTML = "not read yet";
+            btn.classList.remove("read");
+        } else {
+            btn.innerHTML = "read";
+            btn.classList.add("read");
+        }
+    })
+}
+
 
 
 
