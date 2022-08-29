@@ -9,15 +9,21 @@ class Book {
 
 const addBookToLibraryBtn = document.getElementById("submit-btn"); 
 const addBookForm = document.getElementById("add-book-form");
+const addBookFormItems = document.querySelectorAll("form-item");
 const btn = document.getElementById("add-book-button");
-
+const bookSection = document.getElementById("books");
 let myLibrary = [];
 
 btn.addEventListener('click', () => {
     addBookForm.classList.add("visible");
+ 
+    const formTitle = document.getElementById("form-title");
+    const checkbox = document.getElementById("read-status")
 
     window.onclick = (event) => {
-        if (event.target.id != "add-book-button") {
+        if (event.target.id != "add-book-button" && event.target != addBookForm && event.target != formTitle && event.target != checkbox
+         && event.target.id != "submit-btn" && event.target.id != "title" && event.target.id != "author" && event.target.id != "pages" 
+         && event.target.id != "read-status-label") {
             addBookForm.classList.remove("visible");
         }
     }
@@ -27,7 +33,7 @@ addBookForm.addEventListener('submit', () => {
     let title = addBookForm.elements['title'];
     let author = addBookForm.elements['author'];
     let numOfPages = addBookForm.elements['pages'];
-    let readStatus = addBookForm.elements['read-statis'];
+    let readStatus = addBookForm.elements['read-status'];
     let newBook = new Book(title.value, author.value, numOfPages.value, readStatus.checked);
     addBookToLibrary(newBook);
     addBookForm.classList.remove("visible");
@@ -38,7 +44,6 @@ function addBookToLibrary(book) {
     updateLibraryDisplay();
 }
 
-const bookSection = document.getElementById("books");
 function updateLibraryDisplay() {
 
     //targets newly added book

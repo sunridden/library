@@ -17,7 +17,7 @@
         <button id="add-book-button">add book</button>
     </div>
     <form id="add-book-form" onsubmit="return false">
-        <h2>Add new book</h2>
+        <h2 id="form-title">Add new book</h2>
         <p>
             <input type="text" id="title" name="title" placeholder="Title" required>
         </p>
@@ -27,9 +27,9 @@
         <p>
             <input type="number" id="pages" name="pages" placeholder="Pages" required>
         </p>
-        <p class="read-statis">
-            <label for="read-statis">Have you read it?</label>
-            <input type="checkbox" id="read-statis" name="read-statis">
+        <p class="read-status">
+            <label for="read-status" id="read-status-label">Have you read it?</label>
+            <input type="checkbox" id="read-status" name="read-status">
         </p>
         <button id="submit-btn">Submit</button>
     </form>
