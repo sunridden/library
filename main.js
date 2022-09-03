@@ -81,7 +81,7 @@ function updateLibraryDisplay() {
 
     bookToBeAdded.appendChild(readStatusBtn);
 
-    changeReadStatus(readStatusBtn);
+    changeReadStatus(readStatusBtn, newBook);
 
     let removeBtn = document.createElement("button");
     removeBtn.classList.add("remove-btn");
@@ -91,16 +91,18 @@ function updateLibraryDisplay() {
     removeBook(removeBtn, newBook.title, newBook.author);
 }
 
-function changeReadStatus(btn) {
+function changeReadStatus(btn, newBook) {
 
     //changes color for 'read' button depending on whether a book is read
     btn.addEventListener('click', () => {
         if (btn.classList.contains("read")) {
             btn.innerHTML = "not read yet";
             btn.classList.remove("read");
+            newBook.readStatus = false;
         } else {
             btn.innerHTML = "read";
             btn.classList.add("read");
+            newBook.readStatus = true;
         }
     })
 }
